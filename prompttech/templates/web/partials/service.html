@@ -1,0 +1,59 @@
+{% load static %}
+<section class="services bg-dark-100 pt-4 pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-header">
+          <h3 class="text-red text-uppercase border-line">Home & Office Automation</h3>
+        </div>
+      </div>
+      {% for service in automation_services %}
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="500">
+          <div class="icon_box">
+            <h6>{{ service.order }}</h6>
+            <img src="{% static 'web/assets/img/icon_box/d1.svg' %}" alt="Icon Box" class="dark" />
+            <img src="{% static 'web/assets/img/icon_box/d1-light.svg' %}" alt="Icon Box" class="light" />
+            <h4 class="text-white"><a href="#">{{ service.name }}</a></h4>
+            <p class="text-gray-600">{{ service.description }}</p>
+            <div class="arrow_effect">
+              <a href="{% url 'web:service_details' slug=service.slug %}"><span class="crossline1"></span><span class="crossline2"></span></a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="about bg-dark-100">
+  <div class="large_font">
+    <h2 class="floating_element text-dark-200 d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1000">Prompt</h2>
+  </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-12">
+        <div class="about_text_inner">
+          <div class="about_text">
+            <h3 class="text-red mb-3">Security & Surveillance</h3>
+            <p>We prioritize your safety and peace of mind with a comprehensive range of advanced solutions</p>
+          </div>
+          
+        </div>
+      </div>
+      {% for service in security_services %}
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="500">
+          <div class="icon_box">
+            <h6>{{ service.order }}</h6>
+            <img src="{% static 'web/assets/img/icon_box/d1.svg' %}" alt="Icon Box" class="dark" />
+            <img src="{% static 'web/assets/img/icon_box/d1-light.svg' %}" alt="Icon Box" class="light" />
+            <h4 class="text-white"><a href="#">{{ service.name }}</a></h4>
+            <p class="text-gray-600">{{ service.description }}</p>
+            <div class="arrow_effect">
+              <a href="{% url 'web:service_details' slug=service.slug %}"><span class="crossline1"></span><span class="crossline2"></span></a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="page_header">
+    <div class="page_header_inner">
+      <div class="container">
+        <div class="page_header_content d-flex align-items-center justify-content-between">
+          <h2 class="heading">Services</h2>
+          <ul class="breadcrumb d-flex align-items-center">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="active">Services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Wrapper -->
+  <main class="wrapper">
+    {% comment %}service start{% endcomment %}
+    {% include 'web/partials/service.html' %}
+    {% comment %}service end{% endcomment %}
+
+    {% comment %}testimonial start{% endcomment %}
+    {% include 'web/partials/testimonial.html' %}
+    {% comment %}testimonial end{% endcomment %}
+  </main>
+{% endblock %}

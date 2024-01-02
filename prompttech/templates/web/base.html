@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="Mrittik is a Modern Architecture Theme" />
+    <meta name="author" content="" />
+
+    <!-- Favicon and touch Icons -->
+    <link href="{% static 'web/assets/img/favicon.png' %}" rel="shortcut icon" type="image/png" />
+    <link href="{% static 'web/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+    <link href="{% static 'web/assets/img/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72" />
+    <link href="{% static 'web/assets/img/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114" />
+    <link href="{% static 'web/assets/img/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144" />
+
+    <!-- Page Title -->
+    <title>PROMPT TECHNOLOGIES</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Styles Include -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/style.css' %}?V=1.0" />
+    <link rel="stylesheet" href="{% static 'web/assets/css/custom.css' %}?V=1.0" />
+  </head>
+
+  <body class="bg-white">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner"></div>
+        <div class="loading-text">
+          <span data-preloader-text="P" class="characters">P</span>
+          <span data-preloader-text="R" class="characters">R</span>
+          <span data-preloader-text="O" class="characters">O</span>
+          <span data-preloader-text="M" class="characters">M</span>
+          <span data-preloader-text="P" class="characters">P</span>
+          <span data-preloader-text="T" class="characters">T</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Mode Switcher -->
+    <div id="mode_switcher" class="d-none">
+      <span><i class="bi bi-moon-fill"></i></span>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+    {% include 'web/partials/header.html' %}
+    {% include 'web/partials/mr_menu.html' %}
+    {% include 'web/partials/aside.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'web/partials/footer.html' %}
+
+    {% comment %}side button{% endcomment %}
+    <div class="sidebutton">
+      <a href="{% url "web:contact_us" %}"><div class="side_button">Get a Quote</div></a>
+    </div>
+    {% comment %}side button{% endcomment %}
+
+    <!-- Core JS -->
+    <script src="{% static 'web/assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'web/assets/js/ajax.js' %}"></script>
+    <script src="{% static 'web/assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'web/plugins/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/assets/js/funfacts.js' %}"></script>
+    <script src="{% static 'web/plugins/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/plugins/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/plugins/isotope/packery-mode.pkgd.js' %}"></script>
+    <script src="{% static 'web/plugins/isotope/tilt.jquery.js' %}"></script>
+    <script src="{% static 'web/plugins/isotope/isotope-init.js' %}"></script>
+    <script src="{% static 'web/plugins/cursor-effect/cursor-effect.js' %}"></script>
+    <script src="{% static 'web/plugins/select2/js/select2.min.js' %}"></script>
+    <script src="{% static 'web/plugins/aos/aos.js' %}"></script>
+    <script src="{% static 'web/assets/js/theme.js' %}"></script>
+  </body>
+
+  <!-- light/ 43:08 GMT -->
+</html>

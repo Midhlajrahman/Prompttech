@@ -1,0 +1,51 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Main Wrapper -->
+  <main class="wrapper">
+    <!-- Scroll Progress -->
+
+    <section class="project-details bg-dark-200">
+      <div class="container">
+        <div class="gallery_slider">
+          <div class="swiper swiper_gallery">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="gallery-image">
+                  <img src="{{ selected_service.image.url }}" alt="img" />
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- Add Buttons -->
+            <div class="swiper-navigation">
+              <div class="swiper-button-prev">
+                <i class="bi bi-arrow-left"></i>
+              </div>
+              <div class="swiper-button-next">
+                <i class="bi bi-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <div class="project-details_inner">
+              <div class="post_content">
+                <div class="post-header">
+                  <h3 class="post-title">{{ selected_service.name }}</h3>
+                </div>
+                <div class="fulltext">
+                  <p>{{ selected_service.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

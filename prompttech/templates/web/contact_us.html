@@ -1,0 +1,52 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="page_header">
+    <div class="page_header_inner">
+      <div class="container">
+        <div class="page_header_content d-flex align-items-center justify-content-between">
+          <h2 class="heading">Contact Us</h2>
+          <ul class="breadcrumb d-flex align-items-center">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="active">Contact Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Wrapper -->
+  <main class="wrapper">
+    <section class="contact_us bg-dark-200">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+            <div class="section-header">
+              <h2 class="text-white text-uppercase mb-4">LET’S DISCUSS NEXT PROJECTS</h2>
+              <p class="$gray-600">Our team of seasoned professionals is ready to offer their expertise and guidance. From conceptualization to implementation, we provide insights and recommendations that ensure the success and efficiency of your projects.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <div class="home_contact">
+              <form action="" method="POST" class="ajax reload">
+                {% csrf_token %}
+                <div>{{ form.name }}</div>
+
+                <div>{{ form.email }}</div>
+
+                <div>{{ form.subject }}</div>
+
+                <div>{{ form.message }}</div>
+                <div class="btn_group">
+                  <button type="submit" class="btn olive">Send Messgae</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

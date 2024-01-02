@@ -1,0 +1,130 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="page_header">
+    <div class="page_header_inner">
+      <div class="container">
+        <div class="page_header_content d-flex align-items-center justify-content-between">
+          <h2 class="heading">About Us</h2>
+          <ul class="breadcrumb d-flex align-items-center">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="active">About Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrapper">
+    <!-- Scroll Progress -->
+
+    <!-- Our Mission -->
+    <section class="mission">
+      <div class="container">
+        <div class="mission_top_part">
+          <div class="section-header text-center">
+            <h6 class="text-white text-uppercase">{{ about.title }}</h6>
+            <p class="text-gray-600">{{ about.meta_title }}</p>
+          </div>
+          <div class="has_line"></div>
+          <img src="{{ about.image.url }}" alt="" />
+        </div>
+
+        <div class="mission_bottom_part">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 pe-lg-4">
+              <div class="section-header">
+                <h3 class="text-white text-uppercase border-line">{{ about.short_description }}</h3>
+              </div>
+            </div>
+            <div class="col-lg-6 ps-lg-4">
+              <div class="mission_content">
+                <p>{{ about.description|safe }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="funfacts bg_1" id="funfacts">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="funfacts_inner">
+              <div class="funfact2 d-flex align-items-center">
+                <div class="fun_img">
+                  <img src="/static/web/assets/img/fact-1.png" alt="img" />
+                </div>
+                <div class="funfact_content">
+                  <p>Connected Homes</p>
+                  <div class="d-flex align-items-center">
+                    <h2 class="fun-number">120</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="funfact2 d-flex align-items-center">
+                <div class="fun_img">
+                  <img src="/static/web/assets/img/fact-2.png" alt="img" />
+                </div>
+                <div class="funfact_content">
+                  <p>Successful Projects</p>
+                  <div class="d-flex align-items-center">
+                    <h2 class="fun-number">210</h2><span>+</span>
+                  </div>
+                </div>
+              </div>
+              <div class="funfact2 d-flex align-items-center">
+                <div class="fun_img">
+                  <img src="/static/web/assets/img/fact-3.png" alt="img" />
+                </div>
+                <div class="funfact_content">
+                  <p>Satisfied Clients</p>
+                  <div class="d-flex align-items-center">
+                    <h2 class="fun-number">215</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="funfact2 d-flex align-items-center">
+                <div class="fun_img">
+                  <img src="/static/web/assets/img/fact-4.png" alt="img" />
+                </div>
+                <div class="funfact_content">
+                  <p>Project Running</p>
+                  <div class="d-flex align-items-center">
+                    <h2 class="fun-number">62</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% comment %}service start{% endcomment %}
+    {% include 'web/partials/service.html' %}
+    {% comment %}service end{% endcomment %}
+
+    {% comment %}testimonial start{% endcomment %}
+    {% include 'web/partials/testimonial.html' %}
+    {% comment %}testimonial end{% endcomment %}
+
+    <!-- Contact -->
+    <section class="contact_us bg-dark-200">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5">
+            <div class="section-header">
+              <h2 class="text-white text-uppercase mb-4">LET’S DISCUSS NEXT PROJECTS</h2>
+              <p class="$gray-600">Our team of seasoned professionals is ready to offer their expertise and guidance. From conceptualization to implementation, we provide insights and recommendations that ensure the success and efficiency of your projects.</p>
+            </div>
+          </div>
+          {% include 'web/partials/enquiry.html' %}
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

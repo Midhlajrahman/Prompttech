@@ -1,0 +1,56 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="page_header">
+    <div class="page_header_inner">
+      <div class="container">
+        <div class="page_header_content d-flex align-items-center justify-content-between">
+          <h2 class="heading">Projects</h2>
+          <ul class="breadcrumb d-flex align-items-center">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="active">Projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Wrapper -->
+  <main class="wrapper">
+    <!-- Scroll Progress -->
+
+    <section class="projects masonry bg-transparent effect-tilt">
+      <div class="container">
+        <div class="portfolio-filters-content">
+          <div class="filters-button-group">
+            <button class="button is-checked" data-filter="*">All<sup class="filter-count"></sup></button>
+            {% for category in portfolio_cat %}
+              <button class="button" data-filter=".{{ category.category|slugify }}">{{ category.category }}<sup class="filter-count"></sup></button>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="grid grid-2 gutter-90 clearfix">
+          <div class="grid-sizer"></div>
+          {% for portfolio in portfolios %}
+            <div class="grid-item {{ portfolio.portfolio_category.category|slugify }}">
+              <div class="thumb">
+                <img class="item_image" src="{{ portfolio.image.url }}" alt="" />
+                <div class="works-info">
+                  <div class="label-text">
+                    <h5><a href="project-details.html">{{ portfolio.name }}</a></h5>
+                    <h6><a href="#">{{ portfolio.description }}</a></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="btn_group w-100 text-center">
+          <button id="load-more" class="btn gray">Load More</button>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

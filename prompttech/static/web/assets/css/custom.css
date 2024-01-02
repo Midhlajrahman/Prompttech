@@ -1,0 +1,26 @@
+.page_header {
+    padding-top: 85px !important;
+}
+
+.side_button{
+    transform: rotate(-90deg);
+    position: fixed;
+    right: -83px;
+    top: 54vh;
+    text-align: center;
+    width: 215px;
+    height: 50px;
+    padding-top: 15px;
+    background-color: #e5352e;
+    margin: auto;
+    z-index: 20;
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: 500;
+}
+.home_contact div {
+    margin-bottom: 1.5625rem !important;
+}
+.testimonial_inner {
+    bottom: 75px !important;
+}

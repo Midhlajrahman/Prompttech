@@ -1,0 +1,35 @@
+{% load static %}
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header_inner d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="/" class="light_logo"><img src="{%static 'web/assets/img/logo.svg' %}" alt="logo"></a>
+                <a href="/" class="dark_logo"><img src="{% static 'web/assets/img/logo.svg' %}" alt="logo"></a>
+            </div>
+
+            <div class="mainnav d-none d-lg-block">
+                <ul class="main_menu">
+                    <li class="menu-item active"><a href="/">Home</a> </li>
+                    <li class="menu-item"><a href="{% url 'web:about_us' %}">About Us</a> </li>
+                    <li class="menu-item"><a href="{% url 'web:projects' %}">Projects</a> </li>
+                    <li class="menu-item"><a href="{% url 'web:services' %}">Services</a> </li>
+                    <li class="menu-item"><a href="{% url 'web:contact_us' %}">Contact Us</a> </li>
+                </ul>
+            </div>
+            <div class="header_right_part d-flex align-items-center">
+                <button class="aside_open">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
+
+                <!-- Mobile Responsive Menu Toggle Button -->
+                <button type="button" class="mr_menu_toggle d-lg-none">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,15 @@
+{% load static %}
+<div class="col-lg-6">
+  <div class="home_contact">
+    <form action="" method="POST" class="ajax reload">
+      {% csrf_token %}
+      <div>{{ form.name }}</div>
+      <div>{{ form.contact }}</div>
+      <div>{{ form.email }}</div>
+      <div>{{ form.details }}</div>
+      <div class="btn_group">
+        <button type="submit" class="btn olive">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>

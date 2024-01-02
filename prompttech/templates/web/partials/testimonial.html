@@ -1,0 +1,19 @@
+{% load static %}
+<section class="testimonial box_padding pb-0">
+  <div class="testimonial_inner bg-black">
+    <!-- Swiper Testimonial -->
+    <div class="swiper swiper_testimonial">
+      <div class="swiper-wrapper">
+        {% for tstimonial in testimonials %}
+          <div class="swiper-slide">
+            <div class="testimonial-block text-center">
+              <p>“The Switch Automation and Curtain Automation solutions have transformed our living spaces, providing unparalleled convenience and comfort. "</p>
+              <h6 class="text-olive">MAX construction agency, LA</h6>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
